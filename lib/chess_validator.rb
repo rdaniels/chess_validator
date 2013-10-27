@@ -1,5 +1,8 @@
-require "chess_validator/version"
+# require "chess_validator/version"
 
-module ChessValidator
-  # Your code goes here...
+class ChessValidator
+  def self.run(input_board, input_moves)
+    true
+  end
 end
+
