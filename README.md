@@ -1,6 +1,8 @@
 # ChessValidator
 
-Chess move validator: given a list of moves and a board, this program determine whether each move is LEGAL or ILLEGAL
+Solution to PuzzleNode http://www.puzzlenode.com/puzzles/13-chess-validator.
+Chess move validator: given a list of moves and a board, this program determines whether each move is LEGAL or ILLEGAL.
+I'm using RSpec and Guard for this project, which is a bit outside my comfort zone.
 
 * Compatible with RSpec ~> 2.14
 * Tested against Ruby 1.9.3
@@ -26,11 +28,11 @@ Or install it yourself as:
 
 ruby chess_run
 
-## Contributing
+## Git Notes
 
-1. Fork it
+1. Do not run Git commands from inside Vagrant session
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
-4.5 Push to the master with ('git push origin')
-5. Create new Pull Request
+5. OR Push to the master with (`git push origin`)
+6. Create new Pull Request
