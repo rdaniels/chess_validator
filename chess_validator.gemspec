@@ -24,5 +24,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "cucumber"
   spec.add_development_dependency "guard-rspec"
+
+  spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'pry-remote'
+  spec.add_development_dependency 'pry-stack_explorer'
+  spec.add_development_dependency 'pry-debugger'
+
   # spec.add_development_dependency "wdm", '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
 end
