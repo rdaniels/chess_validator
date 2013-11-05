@@ -2,7 +2,7 @@
 $LOAD_PATH.unshift File.expand_path('./lib', __FILE__)
 require './lib/codebreaker/game'
 
-game = Codebreaker::Game.new(STDOUT)
+game = Codebreaker::Game.new(STDOUT,'simple_board.txt')
 # binding.pry
-game.black_or_white('a2','simple_board.txt')
+game.start('simple_moves.txt')
 

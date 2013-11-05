@@ -2,31 +2,14 @@
 
 Solution to PuzzleNode http://www.puzzlenode.com/puzzles/13-chess-validator.
 Chess move validator: given a list of moves and a board, this program determines whether each move is LEGAL or ILLEGAL.
-I'm using RSpec and Guard for this project, which is a bit outside my comfort zone.
 
-* Compatible with RSpec ~> 2.14
-* Tested against Ruby 1.9.3
+I'm trying out RSpec and TDD for this project, which is a bit outside my comfort zone.
 
 
-## Install
-
-Add this line to your application's Gemfile:
-``` ruby
-    gem 'chess_validator'
-```
-
-And then execute:
-``` ruby
-    $ bundle
-```
-
-Or install it yourself as:
-``` ruby
-    $ gem install chess_validator
-```
 ## Usage
 
 ruby chess_run
+
 
 ## Git Notes
 
