@@ -3,15 +3,15 @@
 Solution to PuzzleNode http://www.puzzlenode.com/puzzles/13-chess-validator.
 Chess move validator: given a list of moves and a board, this program determines whether each move is LEGAL or ILLEGAL.
 
-I'm trying out RSpec and TDD for this project, which is a bit outside my comfort zone.
+I'm trying out RSpec and TDD for this project, which is a bit outside my comfort zone. I tried Guard too but it kept crashing
 
 
 ## Usage
 
-ruby chess_run
+ruby run_game
 
 
-## Git Notes
+### Git Notes
 
 1. Do not run Git commands from inside Vagrant session
 2. Create your feature branch (`git checkout -b my-new-feature`)
