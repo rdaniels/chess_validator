@@ -1,29 +1,9 @@
-# TowerOfHanoi
+# Tower of Hanoi
 
-TODO: Write a gem description
+_Coder Night entry for June 2014 : http://en.wikipedia.org/wiki/Tower_of_Hanoi_
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'tower_of_hanoi'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install tower_of_hanoi
+Ruby & RSpec solution
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+    ruby run-tower.rb 8
