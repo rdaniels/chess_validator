@@ -6,4 +6,4 @@ Ruby & RSpec solution
 
 ## Usage
 
-    ruby run-tower.rb 8
+    ruby run-tower
