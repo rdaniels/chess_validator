@@ -1,0 +1,11 @@
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\Tower.exe.config
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\Tower.exe
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\Tower.pdb
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\xunit.dll
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\xunit.runner.utility.dll
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\xunit.abstractions.dll
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\bin\Debug\xunit.xml
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\obj\Debug\Tower.csprojResolveAssemblyReference.cache
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\obj\Debug\Tower.exe
+D:\webroot\github\coder_night\tower_of_hanoi\cs\Tower\obj\Debug\Tower.pdb

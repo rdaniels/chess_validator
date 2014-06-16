@@ -2,8 +2,13 @@
 
 _Coder Night entry for June 2014 : http://en.wikipedia.org/wiki/Tower_of_Hanoi_
 
-Ruby & RSpec solution
+Ruby & C# solution
 
-## Usage
+## Ruby
 
-    ruby run-tower
+  First time using eval (metaprogramming?). Practicing RSpec.
+
+
+## C Sharp
+
+	First time using Xunit and running tests in Visual Studio.
