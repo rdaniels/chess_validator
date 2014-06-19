@@ -7,8 +7,13 @@ Ruby & C# solution
 ## Ruby
 
   First time using eval (metaprogramming?). Practicing RSpec.
+	To Run: run_tower
 
 
 ## C Sharp
 
-	First time using Xunit and running tests in Visual Studio.
+	First time running Xunit tests in Visual Studio. 
+	Program.cs has code for Tower
+	MyTests.cs has Xunit tests
+
+	To Run: bin/debug/Tower 5
