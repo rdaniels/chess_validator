@@ -29,7 +29,7 @@ module TowerOfHanoi
  					p1 = @rod1.last
  					p2 = @rod2.last
  					this_move = ""
- 					this_move = "move_0_1" if valid_even_odd(p0, p1) == true && last_move != "move_1_0"
+ 					this_move = "move_0_1" if this_move == "" && valid_even_odd(p0, p1) == true && last_move != "move_1_0"
 					this_move = "move_0_2" if this_move == "" && valid_even_odd(p0, p2) == true && last_move != "move_2_0"
 					this_move = "move_1_0" if this_move == "" && valid_even_odd(p1, p0) == true && last_move != "move_0_1"
 					this_move = "move_1_2" if this_move == "" && valid_even_odd(p1, p2) == true && last_move != "move_2_1"

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Tower
 {
-    class Program
+    public static class Program
     {
         public static int[] Rod0;
         public static int[] Rod1;
@@ -16,13 +17,55 @@ namespace Tower
 
         static void Main(string[] args)
         {
+            string thisMove = "";
+            string lastMove = "";
+            int loopCount = 0;
+            const int maxLoopCount = 100;
             int numberOfPieces;
+
             int.TryParse(args.First(), out numberOfPieces);
-            ShowTowers(numberOfPieces);
+            var solutionArray = OrderPieces(numberOfPieces);
+            Rod0 = solutionArray;
+            ShowTowers(loopCount);
+
+            // frist move
+            MovePiece(0, numberOfPieces%2 != 0 ? 1 : 2, "");
+            loopCount += 1;
+            ShowTowers(loopCount);
+            
+            // loop through all moves after first
+            while (Rod2 != solutionArray)
+            {
+                while (lastMove == "")
+                {
+                    var p0 = Rod0 == null ? 0 : Rod0.Last();
+                    var p1 = Rod1 == null ? 0 : Rod1.Last();
+                    var p2 = Rod2 == null ? 0 : Rod2.Last();
+                    thisMove = "";
+                    if (ValidEvenOrOdd(p0, p1) && lastMove != "move_1_0" && thisMove == "") thisMove = "move_0_1";
+                    if (ValidEvenOrOdd(p0, p2) && lastMove != "move_2_0" && thisMove == "") thisMove = "move_0_2";
+                    if (ValidEvenOrOdd(p1, p0) && lastMove != "move_0_1" && thisMove == "") thisMove = "move_1_0";
+                    if (ValidEvenOrOdd(p1, p2) && lastMove != "move_2_1" && thisMove == "") thisMove = "move_1_2";
+                    if (ValidEvenOrOdd(p2, p0) && lastMove != "move_0_2" && thisMove == "") thisMove = "move_2_0";
+                    if (ValidEvenOrOdd(p2, p1) && lastMove != "move_1_2" && thisMove == "") thisMove = "move_2_1";
+                    if (thisMove == "") throw new Exception("no valid moves");
+
+                    if (thisMove == "move_0_1") lastMove = MovePiece(0, 1, thisMove);
+                    if (thisMove == "move_0_2") lastMove = MovePiece(0, 2, thisMove);
+                    if (thisMove == "move_1_0") lastMove = MovePiece(1, 0, thisMove);
+                    if (thisMove == "move_1_2") lastMove = MovePiece(1, 2, thisMove);
+                    if (thisMove == "move_2_0") lastMove = MovePiece(2, 0, thisMove);
+                    if (thisMove == "move_2_1") lastMove = MovePiece(2, 1, thisMove);
+                    loopCount += 1;
+                    ShowTowers(loopCount);
+
+                    if(loopCount >= maxLoopCount) throw new Exception("max loopcount reached");
+                }
+            }
         }
 
 
-        public int[] OrderPieces(int numberOfPieces)
+        public static int[] OrderPieces(int numberOfPieces)
         {
             var pieceArray = new int[numberOfPieces];
             for (var x = 0; x < numberOfPieces; x++)
@@ -30,7 +73,7 @@ namespace Tower
             return pieceArray;
         }
 
-        public bool ValidEvenOrOdd(int a, int b)
+        public static bool ValidEvenOrOdd(int a, int b)
         {
             if (a == 0)                     return false;
             if (a % 2 == 0 && b % 2 == 0)   return false;
@@ -38,7 +81,7 @@ namespace Tower
             return true;
         }
 
-        public string MovePiece(int source, int destination, string thisMove)
+        public static string MovePiece(int source, int destination, string thisMove)
         {
             var sourcePiece = 0;
             if (source == 0)
@@ -84,6 +127,7 @@ namespace Tower
     {
         public static T[] AddItemToArray<T>(this T[] original, T itemToAdd)
         {
+            if (original == null) return null;
             var finalArray = new T[original.Length + 1];
             for (int i = 0; i < original.Length; i++)
                 finalArray[i] = original[i];
